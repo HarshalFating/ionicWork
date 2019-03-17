@@ -1,0 +1,63 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content>
+
+  <form (submit)="onSubmit()" [formGroup]="form">
+  <ion-list>
+    <ion-item>
+      <ion-label floating>Username</ion-label>
+      <ion-input type="text" formControlName="uname"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" formControlName="pwd"></ion-input>
+    </ion-item>
+  </ion-list>
+  
+  <ion-list radio-group formControlName="gender">
+    <ion-list-header>Gender</ion-list-header>
+
+    <ion-item>
+      <ion-label>Male</ion-label>
+      <ion-radio value="male"></ion-radio>
+    </ion-item>
+    <ion-item>
+      <ion-label>Female</ion-label>
+      <ion-radio value="female"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <!-- <ion-list formControlName="hobbies">
+    <ion-list-header>Hobbies</ion-list-header>
+
+    <ion-item>
+      <ion-label>Singing</ion-label>
+      <ion-checkbox value="singing"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Dancing</ion-label>
+      <ion-checkbox value="dancing"></ion-checkbox>
+    </ion-item>
+      <ion-item>
+      <ion-label>Painting</ion-label>
+      <ion-checkbox value="painting"></ion-checkbox>
+    </ion-item>
+    <ion-item>
+      <ion-label>Reading</ion-label>
+      <ion-checkbox value="reading"></ion-checkbox>
+    </ion-item>
+  </ion-list> -->
+
+  <div padding>
+    <button ion-button color="primary" small >Submit</button><br><br>
+    <!-- <button ion-button color="primary" block (click)="onLogin()">Login</button> -->
+  </div>
+
+</form>
+</ion-content>
